@@ -65,6 +65,25 @@
     .about p {
       margin: 1rem 0;
     }
+
+    .start-btn {
+      background: #ffffff;
+      color: #7f00ff;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 2rem;
+    }
+
+    .start-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
@@ -99,6 +118,8 @@
 
       <p><strong>8. Polls & Feedback:</strong> Admins create polls (e.g., “Do you prefer offline exams?”). Students vote and view results. Can be used for feedback collection after events.</p>
     </div>
+
+    <button class="start-btn" onclick="alert('Start button clicked!')">Start</button>
   </main>
 
   <script type="module">
