@@ -3,43 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard</title>
+  <title>CampusInfo - Dashboard</title>
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
       background: linear-gradient(to right, #7f00ff, #e100ff);
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
       margin: 0;
+      padding: 0;
     }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .logout-btn {
+      background: white;
+      color: #7f00ff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
     .card {
       background: rgba(255, 255, 255, 0.1);
       padding: 2rem;
       border-radius: 16px;
       text-align: center;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
     }
-    button {
-      background: white;
-      color: #7f00ff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 20px;
+
+    .about {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 900px;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .about h3 {
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    .about p {
+      margin: 1rem 0;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Welcome, <span id="user-email"></span> 👋</h2>
-    <button id="logout-btn">Logout</button>
-  </div>
+
+  <header>
+    <h2>CampusInfo - Welcome, <span id="user-email"></span></h2>
+    <button class="logout-btn" id="logout-btn">Logout</button>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Hello 👋</h2>
+      <p>You are now logged in to the CampusInfo dashboard.</p>
+    </div>
+
+    <div class="about">
+      <h3>Campus Dashboard Features:</h3>
+
+      <p><strong>1. Campus Announcements Feed:</strong> Admin posts important updates like events, exams, holiday notices. Students can view announcements sorted by categories and dates.</p>
+
+      <p><strong>2. Lost & Found Section:</strong> Students report or search for lost/found items with item images and locations. Smart filters based on item category and date.</p>
+
+      <p><strong>3. Mini Timetable Scheduler:</strong> Students can input and manage their weekly class schedule. Timetable displayed in calendar/grid format with edit/delete options.</p>
+
+      <p><strong>4. Hostel Complaint Registration:</strong> Raise complaints (water, electricity, cleaning, etc.) and track complaint status: pending, in-progress, resolved (admin-controlled).</p>
+
+      <p><strong>5. User Authentication System:</strong> Student and admin login/signup with role-based access. JWT or Firebase-based secure session management.</p>
+
+      <p><strong>6. Skill Exchange Marketplace:</strong> Students list skills they can teach (e.g., coding, design, languages). Others can book short peer learning sessions. Promotes collaborative upskilling within campus.</p>
+
+      <p><strong>7. Tech News & Opportunities Feed:</strong> Curated section for hackathons, internships, tech news. Keeps students updated and competitive.</p>
+
+      <p><strong>8. Polls & Feedback:</strong> Admins create polls (e.g., “Do you prefer offline exams?”). Students vote and view results. Can be used for feedback collection after events.</p>
+    </div>
+  </main>
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login / Signup</title>
+  <title>CampusInfo | Login / Signup</title>
   <style>
     body {
       margin: 0;
@@ -12,9 +12,20 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
       color: #fff;
     }
+
+    .college-name {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff8dc;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px #000;
+    }
+
     .container {
       background: rgba(255, 255, 255, 0.1);
       padding: 2rem;
@@ -24,16 +35,26 @@
       width: 90%;
       max-width: 400px;
     }
+
+    .quote {
+      font-size: 0.9em;
+      margin-bottom: 1.5rem;
+      color: #ffecec;
+      font-style: italic;
+    }
+
     input {
       width: 90%;
       padding: 10px;
       margin: 10px 0;
       border: none;
       border-radius: 8px;
+      font-size: 1rem;
     }
+
     button {
       padding: 10px 20px;
-      margin: 10px 0;
+      margin: 10px 5px;
       background-color: #fff;
       color: pink;
       border: none;
@@ -41,10 +62,12 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     .google-btn {
       background: #fff;
       color: #4285f4;
     }
+
     a {
       color: #ffeb3b;
       cursor: pointer;
@@ -52,6 +75,7 @@
       display: block;
       margin-top: 10px;
     }
+
     .error {
       color: #ff6b6b;
       font-size: 0.9em;
@@ -59,13 +83,20 @@
   </style>
 </head>
 <body>
+
+  <h1 class="college-name">Sri Eshwar College of Engineering</h1>
+
   <div class="container">
-    <h2 id="form-title">Login</h2>
+    <h2 id="form-title">CampusInfo</h2>
+    <div class="quote">"Empowering students through seamless access to campus services."</div>
+
     <input type="email" id="email" placeholder="Email" />
     <input type="password" id="password" placeholder="Password" />
     <div class="error" id="error-message"></div>
+
     <button id="auth-btn">Login</button>
     <button class="google-btn" id="google-btn">Sign in with Google</button>
+
     <a id="toggle-link">Don't have an account? Sign up</a>
   </div>
 
